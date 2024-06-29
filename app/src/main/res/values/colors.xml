@@ -2,4 +2,33 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    //Personalized
+    <color name="petronas">#00A19C</color>
+    <color name="petronas_dark">#087A75</color>
+    <color name="red_mercedes">#80142B</color>
+    <color name="silver_mercedes">#C6C6C6</color>
+
+
+    <color name="papaya">#FF8000</color>
+    <color name="gulf">#47C7FC</color>
+
+    <color name="record">#5449a5</color>
+    <color name="borravino">#674275</color>
+    <color name="borravino_light">#6d3d77</color>
+    <color name="borravino_dark">#3e1f62</color>
+
+    <color name="red_ferrari22">#a6051a</color>
+    <color name="yellow_ferrari22">#FFEB00</color>
+    <color name="skyblue_ferrari24">#99CCFF</color> // Azzurro La Plata
+    <color name="blue_ferrari24">#0066CC</color> // Azzurro Dino
+
+
+    <color name="red_rb">#cc1e4a</color>
+    <color name="yellow_rb22">#FFc906</color>
+    <color name="Blue_rb">#223971</color>
+
+    <color name="green_aston">#00665E</color>
+    <color name="lime_aston">#CEDC00</color>
 </resources>
