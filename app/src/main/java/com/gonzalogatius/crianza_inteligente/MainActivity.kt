@@ -13,6 +13,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        Thread.sleep(1800)
+        setTheme(R.style.Base_Theme_Crianza_Inteligente)
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
