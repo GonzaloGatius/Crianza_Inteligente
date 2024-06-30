@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -45,4 +48,17 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //ViewModel: para simplificar la capa de arquitectura ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
+    //LiveData: Conexión entre el activity y el ViewModel
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.2")
+    //Fragment
+    implementation("androidx.fragment:fragment-ktx:1.8.1")
+    //activity
+    implementation("androidx.activity:activity-ktx:1.9.0")
+
+
+
 }
+
