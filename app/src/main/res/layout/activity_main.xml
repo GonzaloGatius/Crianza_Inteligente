@@ -26,16 +26,21 @@
         app:layout_constraintVertical_bias="0.069" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttontestlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="132dp"
-        android:text="Button"
+        android:text="Button test login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titleMain"
-        app:layout_constraintVertical_bias="0.921" />
+        app:layout_constraintVertical_bias="0.921"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp" />
+
+
+
 
     <Button
         android:id="@+id/bt_Preparto"
@@ -51,7 +56,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/grey_dark"
+        app:strokeWidth="3dp" />
 
 
     <Button
@@ -68,7 +75,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_Preparto" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_Preparto"
+        app:strokeColor="@color/grey_dark"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/bt_Recria"
@@ -86,6 +95,10 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_Crianza"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="@color/grey_dark"
+        app:strokeWidth="3dp" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

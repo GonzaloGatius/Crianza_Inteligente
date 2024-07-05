@@ -10,7 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var button: Button
+    private lateinit var buttontestlogin: Button
+    private lateinit var bt_Preparto: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -26,11 +27,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        button = findViewById(R.id.button)
+        buttontestlogin = findViewById(R.id.buttontestlogin)
+        bt_Preparto = findViewById(R.id.bt_Preparto)
 
 
-        button.setOnClickListener {
+        buttontestlogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent) }
+
+        bt_Preparto.setOnClickListener {
+            val intent = Intent(this, PrepartoActivity::class.java)
             startActivity(intent) }
     }
 
