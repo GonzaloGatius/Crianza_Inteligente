@@ -9,13 +9,16 @@
     <color name="petronas_dark">#087A75</color>
     <color name="red_mercedes">#80142B</color>
     <color name="silver_mercedes">#C6C6C6</color>
+    <color name="silver_mercedes_transparente">#2FC6C6C6</color>
 
 
     <color name="papaya">#FF8000</color>
+    <color name="papaya_transparent">#65FF8000</color>
     <color name="gulf">#47C7FC</color>
-    <color name="gulf_transparent">#4171D3FB</color>
+    <color name="gulf_transparent">#6A71D3FB</color>
 
-    <color name="record">#5449a5</color>
+    <color name="record">#5449A5</color>
+    <color name="record_transparente">#6A5449A5</color>
     <color name="borravino">#674275</color>
     <color name="borravino_light">#6d3d77</color>
     <color name="borravino_dark">#3e1f62</color>
@@ -31,12 +34,17 @@
     <color name="Blue_rb">#223971</color>
 
     <color name="green_aston">#00665E</color>
-    <color name="green_aston_transparent">#1900665E</color>
+    <color name="green_aston_transparent">#5400665E</color>
     <color name="lime_aston">#CEDC00</color>
 
     <color name="grey">#45494A</color>
     <color name="grey_dark">#2B2B2B</color>
     <color name="grey_light">#868C8E</color>
+    <color name="grey_light_transparent">#51868C8E</color>
+    <color name="grey_line">#D3D3D3</color>
+
+    <color name="lime_kawasaki">#b3cb4a</color>
+
 
 
 </resources>

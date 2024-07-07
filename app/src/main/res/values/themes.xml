@@ -6,8 +6,18 @@
     </style>
 
     <style name="Theme.Crianza_Inteligente" parent="Base.Theme.Crianza_Inteligente" />
-    
+
+
+<!--    S P L A S H   T H E M E    -->
     <style name="SplashTheme" parent="Base.Theme.Crianza_Inteligente">
         <item name="android:windowBackground">@drawable/splashscreen</item>>
     </style>
+
+
+<!--    &lt;!&ndash;    R A D I O   B U T T O N   T H E M E    &ndash;&gt;-->
+<!--        <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+<!--            &lt;!&ndash; Estilo para RadioButton &ndash;&gt;-->
+<!--                <item name="android:buttonTint">@color/lime_kawasaki</item>-->
+<!--                &lt;!&ndash; Otros atributos del estilo, si los necesitas &ndash;&gt;-->
+<!--            </style>-->
 </resources>
