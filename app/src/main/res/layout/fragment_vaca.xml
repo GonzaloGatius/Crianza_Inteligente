@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_vaca_madre"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/grey_light_transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="8dp"
+    android:paddingTop="36dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_titulo_vaca_madre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="Vaca Madre"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ed_rpmadre"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Número RP de la madre"
+        android:inputType="number"
+        android:textColorHint="@color/grey_light"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_light" />
+
+
+    <Spinner
+        android:id="@+id/spinner_tipo_parto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Tipo de parto"
+        android:textColorHint="@color/grey_light" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_light" />
+
+
+    <Spinner
+        android:id="@+id/spinner_hora_parto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Hora de parto"
+        android:textColorHint="@color/grey_light" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_light" />
+
+
+    <RadioGroup
+        android:id="@+id/rg_cantidad_terneros"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_un_ternero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="15dp"
+            android:text="1 Ternero" />
+
+        <RadioButton
+            android:id="@+id/rb_dos_terneros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="15dp"
+            android:text="2 Terneros" />
+
+        <RadioButton
+            android:id="@+id/rb_tres_terneros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:paddingStart="5dp"
+            android:paddingEnd="15dp"
+            android:text="3 Terneros" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_light" />
+
+
+    <RadioGroup
+        android:id="@+id/rg_vaca_vaquillona"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_vaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:paddingStart="5dp"
+            android:paddingEnd="50dp"
+            android:text="Vaca" />
+
+        <RadioButton
+            android:id="@+id/rb_vaquillona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:text="Vaquillona"
+            tools:ignore="RtlSymmetry" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_light" />
+
+
+    <EditText
+        android:id="@+id/ed_observaciones_vaca_madre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/style_edit_text_backgroud"
+        android:gravity="top|start"
+        android:hint="Observaciones"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLines="6"
+        android:padding="8dp"
+        android:textColorHint="@color/grey" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_light" />
+
+    <Button
+        android:id="@+id/btn_ir_ternero_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:text="Guardar e ir al Ternero 1 " />
+
+
+</LinearLayout>

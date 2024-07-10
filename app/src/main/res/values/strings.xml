@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Crianza_Inteligente</string>
+
+    <string-array name="calidad_calostro_options">
+        <item>Bueno</item>
+        <item>Malo</item>
+        <item>Regular</item>
+    </string-array>
+    <string-array name="momento_dia_parto_options">
+        <item>Mañana</item>
+        <item>Tarde</item>
+        <item>Madrugada</item>
+    </string-array>
+    <string-array name="tipo_parto_options">
+        <item>Normal</item>
+        <item>Asistido Leve</item>
+        <item>Asistido Moderado</item>
+        <item>Asistido Dificil</item>
+        <item>Cesárea</item>
+    </string-array>
+    <string-array name="vitalidad_options">
+        <item>Vitalidad Normal</item>
+        <item>Débil</item>
+        <item>Muy Débil</item>
+        <item>Postrado</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,565 +1,608 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".PrepartoActivity">
-
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:id="@+id/linearLayoutgeneral"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-        <LinearLayout
-            android:id="@+id/layout_vaca_madre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@color/grey_light_transparent"
-            android:orientation="vertical"
-            android:padding="8dp"
-            android:paddingTop="16dp">
-
-
-            <TextView
-                android:id="@+id/tv_titulo_vaca_madre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vaca Madre"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <!-- RP de la madre -->
-            <EditText
-                android:id="@+id/ed_rpmadre"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Número RP de la madre"
-                android:inputType="number"
-                android:textColorHint="@color/grey_light"
-                tools:ignore="VisualLintTextFieldSize" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/grey_line" />
-
-            <!-- Tipo de parto -->
-            <Spinner
-                android:id="@+id/spinner_tipoparto"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Tipo de parto" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/grey_line" />
-
-            <!-- Hora de parto -->
-            <Spinner
-                android:id="@+id/spinner_horaparto"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Hora de parto" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/grey_line" />
-
-            <!-- Parió mellizos, trillizos o uno solo -->
-            <RadioGroup
-                android:id="@+id/rg_cantidadterneros"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rb_unternero"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:paddingEnd="15dp"
-                    android:text="1 Ternero"/>
-
-                <RadioButton
-                    android:id="@+id/rb_dosterneros"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:paddingEnd="15dp"
-                    android:text="2 Terneros" />
-
-                <RadioButton
-                    android:id="@+id/rb_tresterneros"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:paddingStart="5dp"
-                    android:paddingEnd="15dp"
-                    android:text="3 Terneros" />
-            </RadioGroup>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/grey_line" />
-
-            <!-- Vaca o vaquillona -->
-            <RadioGroup
-                android:id="@+id/rg_vacavaquillona"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rb_vaca"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:paddingStart="5dp"
-                    android:paddingEnd="50dp"
-                    android:text="Vaca" />
-
-                <RadioButton
-                    android:id="@+id/rb_vaquillona"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="Vaquillona"
-                    tools:ignore="RtlSymmetry" />
-            </RadioGroup>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/grey_line" />
-
-            <!-- Observaciones -->
-            <EditText
-                android:id="@+id/ed_observaciones_vaca_madre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/style_edit_text_backgroud"
-                android:gravity="top|start"
-                android:hint="Observaciones"
-                android:inputType="textMultiLine"
-                android:lines="4"
-                android:maxLines="6"
-                android:padding="8dp"
-                android:textColorHint="@color/grey" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/grey_line" />
-
-            </LinearLayout>
-
-
-            <!-- / / / / / / / / / /   T E R N E R O  1   / / / / / / / / / / /-->
-
-
-            <!-- Campos de terneros -->
-            <LinearLayout
-                android:id="@+id/layout_ternero_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@color/gulf_transparent"
-                android:orientation="vertical"
-                android:padding="8dp"
-                android:paddingTop="16dp">
-
-                <TextView
-                    android:id="@+id/tv_titulo_ternero_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ternero 1"
-                    android:textColor="@color/black"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-
-
-                <!-- Sexo del Ternero 1-->
-                <RadioGroup
-                    android:id="@+id/rg_ternero_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_1_macho_vivo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Macho\nVivo" />
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_1_hembra_viva"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Hembra\nViva" />
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_1_macho_muerto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Macho\nMuerto" />
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_1_hembra_muerta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Hembra\nMuerta" />
-                </RadioGroup>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/grey_line" />
-
-                <!-- RP del ternero -->
-                <EditText
-                    android:id="@+id/et_rp_ternero_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="RP del Ternero 1"
-                    android:inputType="text" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/grey_line" />
-
-                <!-- Vitalidad Ternero 1-->
-                <Spinner
-                    android:id="@+id/spinner_vitalidad_ternero_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="Vitalidad" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/grey_line" />
-
-                <!-- Cantidad de calostro -->
-                <EditText
-                    android:id="@+id/et_cantidad_calostro_ternero_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="Cantidad de calostro: Ternero 1(L)"
-                    android:inputType="numberDecimal" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/grey_line" />
-
-                <!-- Calidad del calostro -->
-                <Spinner
-                    android:id="@+id/spinner_calidad_calostro_ternero_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="Calidad del calostro" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/grey_line" />
-
-                <!-- Observaciones -->
-                <EditText
-                    android:id="@+id/et_observaciones_ternero_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/style_edit_text_backgroud"
-                    android:gravity="top|start"
-                    android:hint="Observaciones del ternero 1"
-                    android:inputType="textMultiLine"
-                    android:lines="4"
-                    android:maxLines="6"
-                    android:padding="8dp"
-                    android:textColorHint="@color/grey" />
-            </LinearLayout>
-
-
-            <!-- / / / / / / / / / /   T E R N E R O  2   / / / / / / / / / / /-->
-
-
-            <LinearLayout
-                android:id="@+id/layout_ternero_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@color/papaya_transparent"
-                android:orientation="vertical"
-                android:padding="8dp"
-                android:visibility="visible">
-
-                <TextView
-                    android:id="@+id/tv_titulo_ternero_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ternero 2"
-                    android:textColor="@color/black"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-
-                <!-- Sexo del ternero 2 -->
-                <RadioGroup
-                    android:id="@+id/rg_ternero_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_2_macho_vivo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Macho\nVivo" />
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_2_hembra_viva"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Hembra\nViva" />
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_2_macho_muerto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Macho\nMuerto" />
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_2_hembra_muerta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Hembra\nMuerta" />
-                </RadioGroup>
-
-                <!-- RP del ternero -->
-                <EditText
-                    android:id="@+id/et_rp_ternero_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="RP del ternero 2"
-                    android:inputType="text"
-                    android:minHeight="48dp" />
-
-                <!-- Vitalidad -->
-                <Spinner
-                    android:id="@+id/spinner_vitalidad_ternero_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Vitalidad"
-                    android:minHeight="48dp" />
-
-                <!-- Cantidad de calostro -->
-                <EditText
-                    android:id="@+id/et_cantidad_calostro_ternero_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Cantidad de calostro (L)"
-                    android:inputType="numberDecimal"
-                    android:minHeight="48dp" />
-
-                <!-- Calidad del calostro -->
-                <Spinner
-                    android:id="@+id/spinner_calidad_calostro_ternero_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Calidad del calostro"
-                    android:minHeight="48dp" />
-
-                <!-- Observaciones -->
-                <EditText
-                    android:id="@+id/et_observaciones_ternero_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/style_edit_text_backgroud"
-                    android:gravity="top|start"
-                    android:hint="Observaciones del ternero 2"
-                    android:inputType="textMultiLine"
-                    android:lines="4"
-                    android:maxLines="6"
-                    android:padding="8dp"
-                    android:textColorHint="@color/grey" />
-            </LinearLayout>
-
-
-            <!-- / / / / / / / / / /   T E R N E R O  3   / / / / / / / / / / /-->
-
-
-            <LinearLayout
-                android:id="@+id/layout_ternero_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@color/record_transparente"
-                android:orientation="vertical"
-                android:padding="8dp"
-                android:visibility="visible">
-
-                <TextView
-                    android:id="@+id/tv_titulo_ternero_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ternero 3"
-                    android:textColor="@color/black"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-
-                <!-- Sexo del ternero -->
-                <RadioGroup
-                    android:id="@+id/rg_ternero_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_3_macho_vivo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Macho\nVivo" />
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_3_hembra_viva"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Hembra\nViva" />
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_3_macho_muerto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Macho\nMuerto" />
-
-                    <RadioButton
-                        android:id="@+id/rb_ternero_3_hembra_muerta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="2dp"
-                        android:paddingEnd="5dp"
-                        android:text="Hembra\nMuerta" />
-                </RadioGroup>
-
-                <!-- RP del ternero -->
-                <EditText
-                    android:id="@+id/et_rp_ternero_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="RP del ternero 3"
-                    android:inputType="text"
-                    android:minHeight="48dp" />
-
-
-                <!-- Vitalidad -->
-                <Spinner
-                    android:id="@+id/spinner_vitalidad_ternero_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Vitalidad"
-                    android:minHeight="48dp" />
-
-                <!-- Cantidad de calostro -->
-                <EditText
-                    android:id="@+id/et_cantidad_calostro_ternero_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Cantidad de calostro (L)"
-                    android:inputType="numberDecimal"
-                    android:minHeight="48dp" />
-
-                <!-- Calidad del calostro -->
-                <Spinner
-                    android:id="@+id/spinner_calidad_calostro_ternero_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Calidad del calostro"
-                    android:minHeight="48dp" />
-
-                <!-- Observaciones -->
-                <EditText
-                    android:id="@+id/et_observaciones_ternero_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/style_edit_text_backgroud"
-                    android:gravity="top|start"
-                    android:hint="Observaciones del ternero 3"
-                    android:inputType="textMultiLine"
-                    android:lines="4"
-                    android:maxLines="6"
-                    android:padding="8dp"
-                    android:textColorHint="@color/grey" />
-            </LinearLayout>
-
-            <!-- Botón Guardar -->
-            <LinearLayout
-                android:id="@+id/layout_guardar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:gravity="end"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_guardar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Guardar" />
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Este FrameLayout contendrá los fragments -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/white"-->
+<!--    tools:context=".PrepartoActivity">-->
+
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollView"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:layout_marginBottom="40dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearLayoutgeneral"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="16dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/layout_vaca_madre"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="5dp"-->
+    <!--            android:background="@color/grey_light_transparent"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:padding="8dp"-->
+    <!--            android:paddingTop="16dp">-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_titulo_vaca_madre"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Vaca Madre"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            &lt;!&ndash; RP de la madre &ndash;&gt;-->
+<!--            <EditText-->
+<!--                android:id="@+id/ed_rpmadre"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:hint="Número RP de la madre"-->
+<!--                android:inputType="number"-->
+<!--                android:textColorHint="@color/grey_light"-->
+<!--                tools:ignore="VisualLintTextFieldSize" />-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/grey_line" />-->
+
+<!--            &lt;!&ndash; Tipo de parto &ndash;&gt;-->
+<!--            <Spinner-->
+<!--                android:id="@+id/spinner_tipoparto"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:hint="Tipo de parto" />-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/grey_line" />-->
+
+<!--            &lt;!&ndash; Hora de parto &ndash;&gt;-->
+<!--            <Spinner-->
+<!--                android:id="@+id/spinner_horaparto"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:hint="Hora de parto" />-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/grey_line" />-->
+
+<!--            &lt;!&ndash; Parió mellizos, trillizos o uno solo &ndash;&gt;-->
+<!--            <RadioGroup-->
+<!--                android:id="@+id/rg_cantidadterneros"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/rb_unternero"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingStart="5dp"-->
+<!--                    android:paddingEnd="15dp"-->
+<!--                    android:text="1 Ternero"/>-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/rb_dosterneros"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingStart="5dp"-->
+<!--                    android:paddingEnd="15dp"-->
+<!--                    android:text="2 Terneros" />-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/rb_tresterneros"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:checked="true"-->
+<!--                    android:paddingStart="5dp"-->
+<!--                    android:paddingEnd="15dp"-->
+<!--                    android:text="3 Terneros" />-->
+<!--            </RadioGroup>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/grey_line" />-->
+
+<!--            &lt;!&ndash; Vaca o vaquillona &ndash;&gt;-->
+<!--            <RadioGroup-->
+<!--                android:id="@+id/rg_vacavaquillona"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/rb_vaca"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:checked="true"-->
+<!--                    android:paddingStart="5dp"-->
+<!--                    android:paddingEnd="50dp"-->
+<!--                    android:text="Vaca" />-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/rb_vaquillona"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingStart="5dp"-->
+<!--                    android:text="Vaquillona"-->
+<!--                    tools:ignore="RtlSymmetry" />-->
+<!--            </RadioGroup>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/grey_line" />-->
+
+<!--            &lt;!&ndash; Observaciones &ndash;&gt;-->
+<!--            <EditText-->
+<!--                android:id="@+id/ed_observaciones_vaca_madre"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/style_edit_text_backgroud"-->
+<!--                android:gravity="top|start"-->
+<!--                android:hint="Observaciones"-->
+<!--                android:inputType="textMultiLine"-->
+<!--                android:lines="4"-->
+<!--                android:maxLines="6"-->
+<!--                android:padding="8dp"-->
+<!--                android:textColorHint="@color/grey" />-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/grey_line" />-->
+
+<!--            </LinearLayout>-->
+
+
+<!--            &lt;!&ndash; / / / / / / / / / /   T E R N E R O  1   / / / / / / / / / / /&ndash;&gt;-->
+
+
+<!--            &lt;!&ndash; Campos de terneros &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layout_ternero_1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:background="@color/gulf_transparent"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="8dp"-->
+<!--                android:paddingTop="16dp">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_titulo_ternero_1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Ternero 1"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="22sp"-->
+<!--                    android:textStyle="bold" />-->
+
+
+<!--                &lt;!&ndash; Sexo del Ternero 1&ndash;&gt;-->
+<!--                <RadioGroup-->
+<!--                    android:id="@+id/rg_ternero_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_1_macho_vivo"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:checked="true"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Macho\nVivo" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_1_hembra_viva"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Hembra\nViva" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_1_macho_muerto"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Macho\nMuerto" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_1_hembra_muerta"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Hembra\nMuerta" />-->
+<!--                </RadioGroup>-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:background="@color/grey_line" />-->
+
+<!--                &lt;!&ndash; RP del ternero &ndash;&gt;-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_rp_ternero_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:hint="RP del Ternero 1"-->
+<!--                    android:inputType="text" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:background="@color/grey_line" />-->
+
+<!--                &lt;!&ndash; Vitalidad Ternero 1&ndash;&gt;-->
+<!--                <Spinner-->
+<!--                    android:id="@+id/spinner_vitalidad_ternero_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:hint="Vitalidad" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:background="@color/grey_line" />-->
+
+<!--                &lt;!&ndash; Cantidad de calostro &ndash;&gt;-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_cantidad_calostro_ternero_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:hint="Cantidad de calostro: Ternero 1(L)"-->
+<!--                    android:inputType="numberDecimal" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:background="@color/grey_line" />-->
+
+<!--                &lt;!&ndash; Calidad del calostro &ndash;&gt;-->
+<!--                <Spinner-->
+<!--                    android:id="@+id/spinner_calidad_calostro_ternero_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:hint="Calidad del calostro" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:background="@color/grey_line" />-->
+
+<!--                &lt;!&ndash; Observaciones &ndash;&gt;-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_observaciones_ternero_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:background="@drawable/style_edit_text_backgroud"-->
+<!--                    android:gravity="top|start"-->
+<!--                    android:hint="Observaciones del ternero 1"-->
+<!--                    android:inputType="textMultiLine"-->
+<!--                    android:lines="4"-->
+<!--                    android:maxLines="6"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:textColorHint="@color/grey" />-->
+<!--            </LinearLayout>-->
+
+
+<!--            &lt;!&ndash; / / / / / / / / / /   T E R N E R O  2   / / / / / / / / / / /&ndash;&gt;-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layout_ternero_2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:background="@color/papaya_transparent"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="8dp"-->
+<!--                android:visibility="visible">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_titulo_ternero_2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Ternero 2"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="22sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                &lt;!&ndash; Sexo del ternero 2 &ndash;&gt;-->
+<!--                <RadioGroup-->
+<!--                    android:id="@+id/rg_ternero_2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_2_macho_vivo"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:checked="true"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Macho\nVivo" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_2_hembra_viva"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Hembra\nViva" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_2_macho_muerto"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Macho\nMuerto" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_2_hembra_muerta"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Hembra\nMuerta" />-->
+<!--                </RadioGroup>-->
+
+<!--                &lt;!&ndash; RP del ternero &ndash;&gt;-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_rp_ternero_2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="RP del ternero 2"-->
+<!--                    android:inputType="text"-->
+<!--                    android:minHeight="48dp" />-->
+
+<!--                &lt;!&ndash; Vitalidad &ndash;&gt;-->
+<!--                <Spinner-->
+<!--                    android:id="@+id/spinner_vitalidad_ternero_2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Vitalidad"-->
+<!--                    android:minHeight="48dp" />-->
+
+<!--                &lt;!&ndash; Cantidad de calostro &ndash;&gt;-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_cantidad_calostro_ternero_2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Cantidad de calostro (L)"-->
+<!--                    android:inputType="numberDecimal"-->
+<!--                    android:minHeight="48dp" />-->
+
+<!--                &lt;!&ndash; Calidad del calostro &ndash;&gt;-->
+<!--                <Spinner-->
+<!--                    android:id="@+id/spinner_calidad_calostro_ternero_2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Calidad del calostro"-->
+<!--                    android:minHeight="48dp" />-->
+
+<!--                &lt;!&ndash; Observaciones &ndash;&gt;-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_observaciones_ternero_2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:background="@drawable/style_edit_text_backgroud"-->
+<!--                    android:gravity="top|start"-->
+<!--                    android:hint="Observaciones del ternero 2"-->
+<!--                    android:inputType="textMultiLine"-->
+<!--                    android:lines="4"-->
+<!--                    android:maxLines="6"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:textColorHint="@color/grey" />-->
+<!--            </LinearLayout>-->
+
+
+<!--            &lt;!&ndash; / / / / / / / / / /   T E R N E R O  3   / / / / / / / / / / /&ndash;&gt;-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layout_ternero_3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:background="@color/record_transparente"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="8dp"-->
+<!--                android:visibility="visible">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_titulo_ternero_3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Ternero 3"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="22sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                &lt;!&ndash; Sexo del ternero &ndash;&gt;-->
+<!--                <RadioGroup-->
+<!--                    android:id="@+id/rg_ternero_3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_3_macho_vivo"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:checked="true"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Macho\nVivo" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_3_hembra_viva"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Hembra\nViva" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_3_macho_muerto"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Macho\nMuerto" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_ternero_3_hembra_muerta"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingStart="2dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:text="Hembra\nMuerta" />-->
+<!--                </RadioGroup>-->
+
+<!--                &lt;!&ndash; RP del ternero &ndash;&gt;-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_rp_ternero_3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="RP del ternero 3"-->
+<!--                    android:inputType="text"-->
+<!--                    android:minHeight="48dp" />-->
+
+
+<!--                &lt;!&ndash; Vitalidad &ndash;&gt;-->
+<!--                <Spinner-->
+<!--                    android:id="@+id/spinner_vitalidad_ternero_3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Vitalidad"-->
+<!--                    android:minHeight="48dp" />-->
+
+<!--                &lt;!&ndash; Cantidad de calostro &ndash;&gt;-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_cantidad_calostro_ternero_3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Cantidad de calostro (L)"-->
+<!--                    android:inputType="numberDecimal"-->
+<!--                    android:minHeight="48dp" />-->
+
+<!--                &lt;!&ndash; Calidad del calostro &ndash;&gt;-->
+<!--                <Spinner-->
+<!--                    android:id="@+id/spinner_calidad_calostro_ternero_3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Calidad del calostro"-->
+<!--                    android:minHeight="48dp" />-->
+
+<!--                &lt;!&ndash; Observaciones &ndash;&gt;-->
+<!--                <EditText-->
+<!--                    android:id="@+id/et_observaciones_ternero_3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:background="@drawable/style_edit_text_backgroud"-->
+<!--                    android:gravity="top|start"-->
+<!--                    android:hint="Observaciones del ternero 3"-->
+<!--                    android:inputType="textMultiLine"-->
+<!--                    android:lines="4"-->
+<!--                    android:maxLines="6"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:textColorHint="@color/grey" />-->
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Botón Guardar &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layout_guardar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:gravity="end"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_guardar"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Guardar" />-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
