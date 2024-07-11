@@ -1,20 +1,12 @@
 package com.gonzalogatius.crianza_inteligente
 
 import android.os.Bundle
-import android.text.InputType
-import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.Spinner
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 
-class PrepartoActivity : AppCompatActivity() {
+class PrepartoActivity : AppCompatActivity(), TerneroFragment.OnNextTerneroListener {
+
+    private val totalTerneros: Int = 3
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,22 +18,37 @@ class PrepartoActivity : AppCompatActivity() {
                 .replace(R.id.fragment_container, VacaFragment())
                 .commit()
         }
+
+//        // Configurar el botón Volver a Vaca Madre
+//        val btnVolverAVaca = findViewById<Button>(R.id.btn_volver_a_vaca)
+//        btnVolverAVaca.setOnClickListener {
+//            // Aquí se debe hacer el intent para volver al fragment de la vaca madre
+//            supportFragmentManager.popBackStackImmediate()
+//        }
+    }
+
+    override fun onNextTernero() {
+        // Lógica para navegar al siguiente ternero
+        val terneroActual = supportFragmentManager.findFragmentById(R.id.fragment_container) as TerneroFragment?
+        val terneroNumber = terneroActual?.arguments?.getInt("terneroNumber", 1) ?: 1
+
+        // Determinar hacia dónde navegar
+        when (terneroNumber) {
+            1 -> showTerneroFragment(2)
+            2 -> showTerneroFragment(3)
+            // No hacer nada si ya se está en el tercer ternero
+        }
     }
 
     // Método para cambiar de fragment
     fun showTerneroFragment(terneroNumber: Int) {
-        val terneroFragment = TerneroFragment()
-        val args = Bundle()
-        args.putInt("terneroNumber", terneroNumber)
-        terneroFragment.arguments = args
-
+        val terneroFragment = TerneroFragment.newInstance(terneroNumber, totalTerneros)
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, terneroFragment)
             .addToBackStack(null)
             .commit()
     }
 }
-
 
 
 

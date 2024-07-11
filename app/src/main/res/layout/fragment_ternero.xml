@@ -7,9 +7,9 @@
     android:background="@color/gulf_transparent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingStart="8dp"
+    android:paddingStart="4dp"
     android:paddingTop="36dp"
-    android:paddingEnd="8dp"
+    android:paddingEnd="4dp"
     android:paddingBottom="8dp">
 
     <!-- Campos para Ternero -->
@@ -18,14 +18,14 @@
         android:id="@+id/tv_titulo_ternero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ternero 1"
+        android:text="Ternero"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold" />
 
 
     <RadioGroup
-        android:id="@+id/rg_ternero"
+        android:id="@+id/rg_sexo_ternero"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -38,17 +38,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:paddingStart="2dp"
-            android:paddingEnd="5dp"
+            android:paddingStart="1dp"
+            android:paddingEnd="4dp"
             android:text="Macho\nVivo" />
-        />
 
         <RadioButton
             android:id="@+id/rb_hembra_viva"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="2dp"
-            android:paddingEnd="5dp"
+            android:paddingEnd="4dp"
             android:text="Hembra\nViva" />
 
         <RadioButton
@@ -56,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="2dp"
-            android:paddingEnd="5dp"
+            android:paddingEnd="4dp"
             android:text="Macho\nMuerto" />
 
         <RadioButton
@@ -64,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="2dp"
-            android:paddingEnd="5dp"
+            android:paddingEnd="4dp"
             android:text="Hembra\nMuerta" />
     </RadioGroup>
 
@@ -78,9 +77,9 @@
         android:id="@+id/et_rp_ternero"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="RP del Ternero 1"
-        android:textColorHint="@color/grey"
-        android:inputType="text"/>
+        android:hint="RP del Ternero"
+        android:inputType="text"
+        android:textColorHint="@color/grey" />
 
     <View
         android:layout_width="match_parent"
@@ -92,8 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Vitalidad"
-        android:textColorHint="@color/grey"
-        />
+        android:textColorHint="@color/grey" />
 
     <View
         android:layout_width="match_parent"
@@ -104,9 +102,9 @@
         android:id="@+id/et_cantidad_calostro"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Cantidad Calostro (ml)"
-        android:textColorHint="@color/grey"
-        />
+        android:hint="Cantidad Calostro (en Litros)"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/grey" />
 
     <View
         android:layout_width="match_parent"
@@ -116,7 +114,8 @@
     <Spinner
         android:id="@+id/spinner_calidad_calostro"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:hint="Calidad del calostro" />
 
     <View
         android:layout_width="match_parent"
@@ -127,12 +126,35 @@
         android:id="@+id/et_observaciones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/style_edit_text_backgroud"
+        android:gravity="top|start"
         android:hint="Observaciones"
-        android:textColorHint="@color/grey"
-        />
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLines="6"
+        android:padding="8dp"
+        android:textColorHint="@color/grey" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/grey_light" />
+
+    <Button
+        android:id="@+id/btn_volver_a_vaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        android:text="Volver a Vaca Madre " />
+
+    <Button
+        android:id="@+id/btn_ir_siguiente_ternero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:text="Guardar e ir al siguiente Ternero " />
+
 </LinearLayout>
