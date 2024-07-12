@@ -46,7 +46,7 @@ class TerneroFragment : Fragment() {
         // Configurar el botón "Volver a Vaca Madre"
         val btnVolverAVaca: Button = view.findViewById(R.id.btn_volver_a_vaca)
         btnVolverAVaca.setOnClickListener {
-            parentFragmentManager.popBackStack()
+            (requireActivity() as PrepartoActivity).showVacaFragment()
         }
 
         // Configurar el botón "Guardar e ir al siguiente Ternero"
@@ -54,18 +54,22 @@ class TerneroFragment : Fragment() {
         if (terneroNumber == totalTerneros) {
             btnIrSiguienteTernero.visibility = View.GONE
         } else {
-            btnIrSiguienteTernero.text = "Guardar e ir al siguiente Ternero"
+//            btnIrSiguienteTernero.text = "Guardar e ir al siguiente Ternero"
+//            btnIrSiguienteTernero.setOnClickListener {
+//                terneroNumber?.let { currentTernero ->
+//                    if (currentTernero < totalTerneros) {
+//                        (requireActivity() as PrepartoActivity).onNextTernero()
+//                    }
+//                }
+//            }
             btnIrSiguienteTernero.setOnClickListener {
-                terneroNumber?.let { currentTernero ->
-                    if (currentTernero < totalTerneros) {
-                        (requireActivity() as PrepartoActivity).onNextTernero()
-                    }
-                }
+                (requireActivity() as PrepartoActivity).onNextTernero()
             }
         }
 
         // Mostrar un mensaje para verificar el número del ternero
-        Toast.makeText(requireContext(), "Ternero número: $terneroNumber", Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), "Ternero número: $terneroNumber", Toast.LENGTH_SHORT)
+            .show()
 
         return view
     }

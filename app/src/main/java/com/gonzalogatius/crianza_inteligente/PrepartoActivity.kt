@@ -3,10 +3,12 @@ package com.gonzalogatius.crianza_inteligente
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 
 class PrepartoActivity : AppCompatActivity(), TerneroFragment.OnNextTerneroListener {
 
-    private val totalTerneros: Int = 3
+    private var totalTerneros: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +28,9 @@ class PrepartoActivity : AppCompatActivity(), TerneroFragment.OnNextTerneroListe
 //            supportFragmentManager.popBackStackImmediate()
 //        }
     }
-
+    fun updateTerneroCount(count: Int) {
+        totalTerneros = count
+    }
     override fun onNextTernero() {
         // Lógica para navegar al siguiente ternero
         val terneroActual = supportFragmentManager.findFragmentById(R.id.fragment_container) as TerneroFragment?
@@ -48,6 +52,11 @@ class PrepartoActivity : AppCompatActivity(), TerneroFragment.OnNextTerneroListe
             .addToBackStack(null)
             .commit()
     }
+
+    fun showVacaFragment() {
+        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+    }
+
 }
 
 
