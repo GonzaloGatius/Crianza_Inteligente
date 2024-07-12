@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -42,6 +44,29 @@ class TerneroFragment : Fragment() {
 
         val etObservaciones: EditText = view.findViewById(R.id.et_observaciones)
         etObservaciones.hint = "Observaciones Ternero $terneroNumber"
+
+        // Configurar los Spinners
+        val spinnerVitalidad: Spinner = view.findViewById(R.id.spinner_vitalidad)
+        val spinnerCalidadCalostro: Spinner = view.findViewById(R.id.spinner_calidad_calostro)
+
+        ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.vitalidad_options,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinnerVitalidad.adapter = adapter
+        }
+
+        ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.calidad_calostro_options,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinnerCalidadCalostro.adapter = adapter
+        }
+
 
         // Configurar el botón "Volver a Vaca Madre"
         val btnVolverAVaca: Button = view.findViewById(R.id.btn_volver_a_vaca)
